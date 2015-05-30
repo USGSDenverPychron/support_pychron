@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='ASCII'?>
+<root>
+
+    <!--Argus -->
+    <spectrometer>Argus
+        <color>85,110,255,255</color>
+        <translation>19.0,5.0</translation>
+        <dimension>5,5</dimension>
+        <volume>650</volume>
+    </spectrometer>
+    <valve>E
+        <translation>21.0,-3.0</translation>
+    </valve>
+    <connection orientation="vertical">
+        <start>E</start>
+        <end>Argus</end>
+    </connection>
+    <ionpump display_name="Ion Pump">ArgusIonPump
+       <color>234, 165, 57</color>
+        <translation>17,-7</translation>
+        <dimension>6,3</dimension>
+    </ionpump>
+    <connection orientation="vertical">
+        <start>E</start>
+        <end>ArgusIonPump</end>
+    </connection>
+
+    <valve>C
+        <translation>8,6.0</translation>
+    </valve>
+    <connection orientation="horizontal">
+        <start>C</start>
+        <end>Argus</end>
+    </connection>
+    <connection orientation="vertical">
+        <start>C</start>
+        <end>Analytical</end>
+    </connection>
+
+    <ionpump display_name="Ion Pump">ExtrIonPump
+    <color>255,200,0</color>
+        <translation>-16,9</translation>
+        <dimension>6,3</dimension>
+    </ionpump>
+    <connection orientation="vertical">
+        <start>D</start>
+        <end>ExtrIonPump</end>
+    </connection>
+    <valve>D
+       <translation>-14.0,6.0</translation>
+    </valve>
+    <connection orientation="vertical">
+        <start>D</start>
+        <end>Analytical</end>
+    </connection>
+    <stage>Analytical
+      <translation>-14,0.0</translation>
+        <dimension>25,3</dimension>
+    </stage>
+
+    <!-- gauges -->
+    <gauge>Prep IG
+        <font>modern 10</font>
+        <translation>-20, 0</translation>
+        <dimension>3.5,2</dimension>
+    </gauge>
+    <connection orientation='horizontal'>
+        <start>Prep IG</start>
+        <end>Analytical</end>
+    </connection>
+    <valve>R
+        <translation>-23,0</translation>
+    </valve>
+    <gauge>MS IG
+        <font>modern 10</font>
+        <translation>20, 12</translation>
+        <dimension>3.5,2</dimension>
+    </gauge>
+    <connection orientation='vertical'>
+        <start>MS IG</start>
+        <end>Argus</end>
+    </connection>
+    <valve>S
+        <translation>17,12</translation>
+    </valve>
+
+
+    <!-- getter Man-->
+    <getter>Man 1
+        <translation>-10,15</translation>
+        <dimension>4,2</dimension>
+    </getter>
+    <getter>Man 2
+        <translation>-3,15</translation>
+        <dimension>4,2</dimension>
+    </getter>
+    <connection>
+        <start>Man 1</start>
+        <end>Man 2</end>
+    </connection>
+    <connection orientation='vertical'>
+        <start offset="9.5,0">Analytical</start>
+        <end offset="0,0.25">Man 2</end>
+    </connection>
+
+    <!-- switches -->
+    <switch>J
+        <translation>-12,18</translation>
+        <slabel offset="10,22">Degas
+        </slabel>
+    </switch>
+    <switch>K
+        <translation>-8.5,18</translation>
+        <slabel offset="15,22">Operate</slabel>
+    </switch>
+
+    <switch>L
+        <translation>-2.5,18</translation>
+        <slabel offset="10,22">Degas</slabel>
+    </switch>
+    <switch>M
+        <translation>1,18</translation>
+        <slabel offset="15,22">Operate</slabel>
+    </switch>
+
+    <!-- getter Aux-->
+    <getter>Aux 1
+        <translation>-14,-10</translation>
+        <dimension>4,2</dimension>
+    </getter>
+    <getter>Aux 2
+        <translation>-3,-10</translation>
+        <dimension>4,2</dimension>
+    </getter>
+    <connection orientation='vertical'>
+        <start>Aux 1</start>
+        <end>A</end>
+    </connection>
+    <connection orientation='vertical'>
+        <start>Aux 2</start>
+        <end>B</end>
+    </connection>
+
+    <connection orientation='vertical'>
+        <start>A</start>
+        <end>Analytical</end>
+    </connection>
+
+    <connection orientation='vertical'>
+        <start>B</start>
+        <end>Analytical</end>
+    </connection>
+
+    <valve>A
+        <translation>-14,-5</translation>
+    </valve>
+    <valve>B
+        <translation>-3,-5</translation>
+    </valve>
+
+    <!-- switches -->
+    <switch>N
+        <translation>-14.5,-12</translation>
+        <slabel offset="10,-22">Degas</slabel>
+    </switch>
+    <switch>O
+        <translation>-11,-12</translation>
+        <slabel offset="15,-22">Operate</slabel>
+    </switch>
+
+    <switch>P
+        <translation>-3.5,-12</translation>
+        <slabel offset="10,-22">Degas</slabel>
+    </switch>
+    <switch>Q
+        <translation>0,-12</translation>
+        <slabel offset="15,-22">Operate</slabel>
+    </switch>
+
+
+    <!-- Pipettes -->
+    <valve>H
+        <translation>4.0,-15.25</translation>
+    </valve>
+    <valve>I
+        <translation>4.0,-20.25</translation>
+    </valve>
+    <valve>F
+        <translation>7.0,-15.25</translation>
+    </valve>
+    <valve>G
+        <translation>7.0,-20.25</translation>
+    </valve>
+
+    <connection orientation="vertical">
+        <start>H</start>
+        <end>Analytical</end>
+    </connection>
+    <connection orientation="vertical">
+        <start>F</start>
+        <end>Analytical</end>
+    </connection>
+
+    <connection orientation="vertical">
+        <start>H</start>
+        <end>ArPipette</end>
+    </connection>
+    <connection orientation="vertical">
+        <start>F</start>
+        <end>AirPipette</end>
+    </connection>
+
+    <!--tanks-->
+    <tank>Ar
+      <color>59, 163, 166</color>
+        <translation>1,-23</translation>
+        <dimension>5,2</dimension>
+        <connection orientation="vertical">
+            <start>I</start>
+            <end>Ar</end>
+        </connection>
+    </tank>
+    <pipette display_name="">ArPipette
+    	  <color>59, 163, 166</color>
+        <!--<color>59, 163, 120</color>-->
+        <translation>4,-17.75</translation>
+        <dimension>2,2</dimension>
+        <!--<vlabel>Shots={:04n}
+            <font>modern 10</font>
+            <translation>-7,0</translation>
+        </vlabel>-->
+    </pipette>
+    <connection orientation="vertical">
+        <start>I</start>
+        <end>ArPipette</end>
+    </connection>
+    <tank>Air
+	   <color>0, 195, 255</color>
+        <translation>7,-23</translation>
+        <dimension>5,2</dimension>
+        <connection orientation="vertical">
+            <start>G</start>
+            <end>Air</end>
+        </connection>
+    </tank>
+    <pipette display_name="">AirPipette
+	    <color>0, 195, 255</color>
+        <translation>7,-17.75</translation>
+        <dimension>2,2</dimension>
+        <!--<vlabel>Shots={:04n}
+            <font>modern 10</font>
+            <translation>4,0</translation>
+        </vlabel>-->
+    </pipette>
+    <connection orientation="vertical">
+        <start>G</start>
+        <end>AirPipette</end>
+    </connection>
+
+
+    <!--LEGEND-->
+    <!--
+    <legend>
+        <origin>-26,-22</origin>
+        <llabel use_border="false">Owned
+           <translation>0,9.25</translation>
+        </llabel>
+        <rect display_name="" fill="false">
+            <translation>4,9.25</translation>
+            <dimension>1,1</dimension>
+            <color>0,0,0</color>
+        </rect>
+        <llabel use_border="false">Locked
+           <translation>0,7.75</translation>
+        </llabel>
+        <rect display_name="" fill="false">
+            <translation>4,7.75</translation>
+            <dimension>1,1</dimension>
+            <color>0,0,255</color>
+        </rect>
+        <lline>
+            <start>0,7.37</start>
+            <end>8,7.37</end>
+        </lline>
+        <llabel use_border="false">Static
+           <translation>0,6.0</translation>
+        </llabel>
+        <rect display_name="">
+            <translation>4,6.0</translation>
+            <dimension>1,1</dimension>
+            <color>204,204,204</color>
+        </rect>
+        <llabel use_border="false">Refs.
+           <translation>0,4.5</translation>
+        </llabel>
+        <rect display_name="">
+            <translation>4,4.5</translation>
+            <dimension>1,1</dimension>
+            <color>AirPipette</color>
+        </rect>
+        <rect display_name="">
+            <translation>5.5,4.5</translation>
+            <dimension>1,1</dimension>
+            <color>CocktailPipette</color>
+        </rect>
+        <llabel use_border="false">Lasers
+           <translation>0,3.0</translation>
+        </llabel>
+        <rect display_name="">
+            <translation>4,3</translation>
+            <dimension>1,1</dimension>
+            <color>Diode</color>
+        </rect>
+        <rect display_name="">
+            <translation>5.5,3</translation>
+            <dimension>1,1</dimension>
+            <color>CO2</color>
+        </rect>
+        <llabel use_border="false">Pump
+           <translation>0,1.5</translation>
+        </llabel>
+        <rect display_name="">
+            <translation>4,1.5</translation>
+            <dimension>1,1</dimension>
+            <color>ATurbo</color>
+        </rect>
+        <rect display_name="">
+            <translation>5.5,1.5</translation>
+            <dimension>1,1</dimension>
+            <color>BTurbo</color>
+        </rect>
+        <rect display_name="">
+            <translation>7,1.5</translation>
+            <dimension>1,1</dimension>
+            <color>RTurbo</color>
+        </rect>
+        <rect display_name="">
+            <translation>8.5,1.5</translation>
+            <dimension>1,1</dimension>
+            <color>JanIonPump</color>
+        </rect>
+        <llabel use_border="false">Spec
+           <translation>0,0</translation>
+        </llabel>
+        <rect display_name="">
+            <translation>4,0</translation>
+            <dimension>1,1</dimension>
+            <color>Jan</color>
+        </rect>
+        <rect display_name="">
+            <translation>5.5,0</translation>
+            <dimension>1,1</dimension>
+            <color>Obama</color>
+        </rect>
+        <rect display_name="">
+            <translation>7,0</translation>
+            <dimension>1,1</dimension>
+            <color>Quad</color>
+        </rect>
+    </legend>
+    -->
+</root>
